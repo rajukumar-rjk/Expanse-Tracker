@@ -7,7 +7,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { getItems, addItem } from "../services/Items";
 import { Button, Container, Modal, Form } from "react-bootstrap";
-const ExpanseTracker = () => {
+const ExpenseTracker = () => {
   const [items, setItems] = useState<IItems[]>([] as IItems[]);
   const [error, setError] = useState<Error | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
@@ -119,7 +119,7 @@ const ExpanseTracker = () => {
       <div>
         <Row>
           <Col xs={{ order: "first" }}>
-            <h1>Expanse Tracker</h1>
+            <h1>Expense Tracker</h1>
           </Col>
           {/* <Col xs={{ order: "last" }}>
             <Form.Group className="mb-3" controlId="payeeName">
@@ -146,14 +146,14 @@ const ExpanseTracker = () => {
               className="float-end"
               onClick={handleShow}
             >
-              Add Expanse
+              Add Expense
             </Button>
           </Col>
         </Row>
         {/* <h1>
-          Expanse Tracker
+          Expense Tracker
           <Button variant="primary" className="float-end" onClick={handleShow}>
-            Add Expanse
+            Add Expense
           </Button>
         </h1> */}
       </div>
@@ -210,4 +210,4 @@ const ExpanseTracker = () => {
   );
 };
 
-export default ExpanseTracker;
+export default ExpenseTracker;
